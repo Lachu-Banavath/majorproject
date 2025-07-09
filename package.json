@@ -2,10 +2,8 @@
   "engines": {
     "node": "22.14.0"
   },
-  
   "dependencies": {
     "@geoapify/geocoder-autocomplete": "^2.1.0",
-    "cloudinary": "^2.7.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^5.1.0",
     "cookie-parser": "^1.4.7",
@@ -19,7 +17,6 @@
     "method-override": "^3.0.0",
     "mongoose": "^8.13.2",
     "multer": "^2.0.1",
-    "multer-storage-cloudinary": "^4.0.0",
     "node-fetch": "^2.7.0",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
