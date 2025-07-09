@@ -23,6 +23,8 @@ const reviews = require("./routes/review.js");
 const user = require("./routes/user.js");
 const searchRoutes = require("./routes/search.js");
 
+//const MONGO_URL = process.env.MONGO_URL || "mongodb://127.0.0.1:27017/wanderlust";
+
 const dbUrl = process.env.ATLASDB_URL;
 
 main()
@@ -65,6 +67,8 @@ const sessionOptions = {
   },
 };
 
+
+
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -87,6 +91,7 @@ app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
 app.use("/", user);
 app.use("/search", searchRoutes);
+
 
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!!"));
